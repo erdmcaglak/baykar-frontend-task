@@ -110,7 +110,6 @@ export default {
         questionTimer(){
             clearInterval(this.interval);
             this.interval = setInterval(() => {
-                
                 if(this.questionTime === this.questionTotalTime){
                     if(this.currentQuestionNumber === this.questionNumbers-1){
                         this.questionTime=0;
@@ -217,8 +216,8 @@ export default {
             else{
                 for(let i=0;i<this.questionNumbers;i++){
                     const setUniqQuestions = () =>{
-                        let randomQuestionNumber = Math.floor(Math.random() * (res.length-1)); 
-                        if(this.questions.find(e=> e?.id === randomQuestionNumber)){
+                        let randomQuestionNumber = Math.floor(Math.random() * (res.length-2)) + 1; 
+                        if(this.questions.find(e=> e?.id === randomQuestionNumber) && !randomQuestionNumber){
                             setUniqQuestions()
                         }
                         else{
@@ -254,6 +253,9 @@ export default {
         if(this.isFinished){
             this.headerText = 'Quiz App Results'
         }
+    },
+    destroyed(){
+        clearInterval(this.interval)
     }
 }
 </script>
@@ -322,16 +324,17 @@ export default {
             width: 100%;
             border-radius: 8px;
             position: relative;
-            @media (min-width: 1024px){
-                max-width: 900px;
-                min-height: 500px;
+            @media (max-width: 480px){
+                gap: 10px;
             }
             @media (min-width: 481px){
                 min-height: 400px;
             }
-            @media (max-width: 480px){
-                gap: 10px;
+            @media (min-width: 1024px){
+                max-width: 900px;
+                min-height: 500px;
             }
+            
             
             .question{
                 text-align: left;
