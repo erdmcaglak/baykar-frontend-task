@@ -1,19 +1,46 @@
-# baykar_frontend_task
 
-## Project setup
+# Baykar Frontend Task
+
+2 task için tek bir repo kullanıldı. Siteye girildiğinde sağ aşağıda bulunan butonlarla birlikte projeler arasında geçiş yapılabilir.
+
+
+
+## Kullanılan Teknolojiler
+
+**Framework:** Vue
+
+**Libraries:** Tailwind, Swiper, Axios
+
+  
+## Bilgisayarınızda Çalıştırın
+
+Projeyi klonlayın
+
+```bash
+git clone https://github.com/erdmcaglak/baykar-frontend-task
 ```
+
+Proje dizinine gidin
+
+```bash
+cd baykar-frontend-task
+```
+
+Gerekli paketleri yükleyin
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+Sunucuyu çalıştırın
+
+```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+  
+## Geri Bildirim
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Herhangi bir geri bildiriminiz varsa, lütfen erdem.caglak@gmail.com adresinden bana ulaşın.
+
+  
