@@ -3,6 +3,8 @@
 
 2 task için tek bir repo kullanıldı. Siteye girildiğinde sağ aşağıda bulunan butonlarla birlikte projeler arasında geçiş yapılabilir.
 
+[Baykar Frontend Task](https://baykar-frontend-task.vercel.app/css-work) linkinden projeye ulaşabilirsiniz. 
+
 
 
 ## Kullanılan Teknolojiler
