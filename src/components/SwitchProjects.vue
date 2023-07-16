@@ -41,7 +41,7 @@ export default {
     min-width: 100px;
     padding: 8px 4px;
     border-radius: 6px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     user-select: none;
     cursor: pointer;
     transition: all .2s linear;

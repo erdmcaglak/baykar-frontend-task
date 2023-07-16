@@ -18,7 +18,7 @@
             <div @click="goNextQuestion" :class="!currentSelectedOptionIndex && currentSelectedOptionIndex!==0 ? 'disabled-next-question' : '' + ' next-question'">
                 {{getButtonText}}
             </div>
-            <div class="question-timer">
+            <div :class="['question-timer',questionTime < 10 ? 'disabled-timer' : questionTime > 20 ? 'alert-timer' : 'active-timer']">
                 {{getQuestionTime}}
             </div>
             <div class="mobile-current-question">
@@ -321,7 +321,7 @@ export default {
             }
             .question{
                 text-align: left;
-                font-size: 1.6rem;
+                font-size: 2rem;
                 font-weight: 700;
                 padding: 40px 30px;
                 @media (max-width: 481px){
@@ -332,7 +332,7 @@ export default {
                 @include d-flex(column,flex-start,center);
                 gap: 10px;
                 .question-option{
-                    font-size: 1.6rem;
+                    font-size: 2rem;
                     border: 1px solid #999999;
                     width: 90%;
                     border-radius: 4px;
@@ -367,7 +367,7 @@ export default {
                 background-color: transparent;
                 color: #fff;
                 background-color: #274b99;
-                font-size: 1.8rem;
+                font-size: 2.2rem;
                 border-radius: 8px;
                 padding: 10px 20px;
                 border: none;
@@ -404,13 +404,34 @@ export default {
                 top: 20px;
                 width: 50px;
                 height: 50px;
-                font-size: 1.6rem;
+                font-size: 1.8rem;
                 font-weight: 700;
                 user-select: none;
                 pointer-events: none;
                 @media (max-width: 481px){
                     right: -10px;
                     top: 5px;
+                }
+            }
+            .disabled-timer{
+                color: #b9b9b9;
+            }
+            .active-timer{
+                color: #274b99;
+            }
+            .alert-timer{
+                color: #b34242;
+                animation: scale .4s infinite linear;
+            }
+            @keyframes scale {
+                0%{
+                    transform: scale(1)
+                }
+                50%{
+                    transform: scale(1.2)
+                }
+                100%{
+                    transform: scale(1)
                 }
             }
         }
@@ -481,7 +502,7 @@ export default {
                 background-color: transparent;
                 color: #fff;
                 background-color: #274b99;
-                font-size: 1.8rem;
+                font-size: 2.2rem;
                 border-radius: 8px;
                 padding: 10px 20px;
                 border: none;
@@ -502,7 +523,7 @@ export default {
             position: absolute;
             left: 10px;
             top: 5px;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: #707070;
             @media (min-width: 481px){

@@ -9,7 +9,7 @@
           {{growContent}}
         </div>
       </div>
-      <div class="grow-items-area flex justify-start items-stretch w-full min-h-[550px] max-[767px]:flex-col max-[767px]:gap-[32px]">
+      <div class="grow-items-area flex justify-start items-stretch w-full min-h-[500px] md:min-h-[550px] max-[767px]:flex-col max-[767px]:gap-[32px]">
         <div class="buttons-wrapper overflow-auto max-[767px]:py-[10px]">
           <div class="buttons flex justify-start items-stretch gap-[16px] md:flex-col">
             <div @click="choseButton(item)" v-for="(item,i) in buttonList" :key="'growButton'+i" :class="['grow-button flex justify-start items-center gap-[16px] font-medium text-[2rem] p-[16px] select-none cursor-pointer rounded-[8px] max-[767px]:min-w-[200px]',selectedButton === item.id ? 'bg-[#fff] shadow-[0_4px_6px_-1px_#0000001A]' : '']">
@@ -17,7 +17,7 @@
               <div class="button-content">
                 {{item.title}}
               </div>
-              <img v-if="selectedButton === item.id && !getWindowWidth" :src="require('../../assets/icons/arrow-right.svg')" alt="">
+              <img class="hidden md:block" :src="require('../../assets/icons/arrow-right.svg')" alt="">
             </div>
           </div>
         </div>

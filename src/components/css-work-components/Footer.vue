@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-main w-full bg-[#0F172A] max-[639px]:pb-[100px]">
+  <div class="footer-main w-full bg-[#0F172A] pb-[48px] max-[639px]:pb-[100px]">
     <div class="footer container mx-auto px-[16px] gap-[32px] relative flex flex-col justify-start items-start">
       <div class="button-area w-full flex justify-between items-stretch border-b border-b-solid border-b-[#334155] py-[48px] max-[639px]:flex-col max-[639px]:gap-[48px]">
         <div v-for="(item,i) in footerItems" :key="'buttonsGroup'+i" class="buttons-wrapper flex flex-col justify-start items-stretch flex-[1_0_0%] max-[639px]:items-center">
