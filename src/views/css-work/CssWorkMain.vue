@@ -7,6 +7,8 @@
       <JoinUs/>
       <LoveUs/>
       <GrowCollection/>
+      <ShoesCollected/>
+      <Footer/>
     </div>
   </div>
 </template>
@@ -18,6 +20,8 @@ import TheBestOf from '@/components/css-work-components/TheBestOf.vue'
 import JoinUs from '@/components/css-work-components/JoinUs.vue'
 import LoveUs from '@/components/css-work-components/LoveUs.vue'
 import GrowCollection from '@/components/css-work-components/GrowCollection.vue'
+import ShoesCollected from '@/components/css-work-components/ShoesCollected.vue'
+import Footer from '@/components/css-work-components/Footer.vue'
 export default {
   data(){
     return{
@@ -30,7 +34,9 @@ export default {
     TheBestOf,
     JoinUs,
     LoveUs,
-    GrowCollection
+    GrowCollection,
+    ShoesCollected,
+    Footer
   }
 }
 </script>
