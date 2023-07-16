@@ -4,5 +4,5 @@ export const routeList = [
   {title:'Pricing',src:'/pricing',id:'pricing'},
   {title:'Resources',src:'/resources',id:'resources'},
   {title:'Log In',src:'/login',id:'login'},
-  {title:'Sign Up Now',src:'/sign-up',id:'signup'},
+  {title:'Sign up now',src:'/sign-up',id:'signup'},
 ]

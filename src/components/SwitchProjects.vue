@@ -30,7 +30,7 @@ export default {
 @import "@/scss/mixins.scss";
 .switch-projects-wrapper{
   position: fixed;
-  right: 10px;
+  right: 30px;
   bottom: 10px;
   @include d-flex(column,flex-start,stretch);
   gap: 5px;

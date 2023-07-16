@@ -1,8 +1,5 @@
 <template>
   <div class="quiz-main">
-    <h1 class="quiz-app-header">
-        {{headerText}}
-    </h1>
     <ul v-if="!isFinished" class="numbers-of-questions">
         <li v-for="(item,i) in questions" :key="'questionNumber'+i" :class="currentQuestionNumber === i ? 'current-question-number': currentQuestionNumber > i ? 'passed-question-number' : '' + 'question-number'">
             {{i+1}}
@@ -267,18 +264,6 @@ export default {
     height: 100%;
     @include d-flex(column,center,center);
     gap: 20px;
-    .quiz-app-header{
-        font-size: 3rem;
-        text-transform: uppercase;
-        @include d-flex-center;
-        margin-bottom: 50px;
-        @media (max-width: 768px){
-            margin-bottom: 20px;
-        }
-        @media (max-width: 480px){
-            margin-bottom: 0px;
-        }
-    }
     .numbers-of-questions{
         @include d-flex-center;
         gap: 10px;
@@ -334,8 +319,6 @@ export default {
                 max-width: 900px;
                 min-height: 500px;
             }
-            
-            
             .question{
                 text-align: left;
                 font-size: 1.6rem;
